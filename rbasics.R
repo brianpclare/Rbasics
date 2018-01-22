@@ -40,6 +40,11 @@ for(i in 1:length(c)){
   c[i] <- i^2
 }
 
+# But also without the for loop
+
+d <- 1:20
+d <- d^2
+
 # Repeated task without a function:  copy-paste
 
 file1 <- read.table("read_this_1.txt")
@@ -66,3 +71,12 @@ import_file <- function(path){
 file1 <- import_file("read_this_1.txt")
 file2 <- import_file("read_this_2.txt")
 file3 <- import_file("read_this_3.txt")
+
+# Logic
+
+4 == (5 - 1)
+4 != 6
+7 + FALSE
+9 + TRUE
+TRUE + TRUE
+9 + True
