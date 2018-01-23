@@ -84,9 +84,9 @@ TRUE + TRUE
 # Quote and Backquote usage
 
 alarm clock <- 12
-alarm_clock <- 12
-`alarm clock` <- 12
-"alarm time" <- 12
+alarm_clock <- 11
+`alarm clock` <- 10
+"alarm time" <- 9
 
 class("alarm time")
 
