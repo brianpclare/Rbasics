@@ -80,3 +80,20 @@ file3 <- import_file("read_this_3.txt")
 9 + TRUE
 TRUE + TRUE
 9 + True
+
+# Quote and Backquote usage
+
+alarm clock <- 12
+alarm_clock <- 12
+`alarm clock` <- 12
+"alarm time" <- 12
+
+class("alarm time")
+
+class(`alarm clock`)
+
+"alarm time"
+
+`alarm clock`
+
+`alarm time`
