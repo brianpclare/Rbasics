@@ -36,6 +36,10 @@ if(y < 10){
 # Control Structure: For loops
 c <- 1:20
 
+for (variable in vector) {
+  
+}
+
 for(i in 1:length(c)){
   c[i] <- i^2
 }
