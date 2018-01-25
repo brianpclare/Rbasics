@@ -75,6 +75,34 @@ NA * 100
 
 NA == 0
 
+q <- NA
+
+is.na(q)
+is.na(0)
+!is.na(q)
+
+is.na(iris$Sepal.Length)
+sum(is.na(iris$Sepal.Length))
+
+iris2 <- na.omit(iris)
+
+iris[is.na(iris$Sepal.Length), ]
+
+# Class changes
+
+class(iris$Sepal.Length)
+iris$Sepal.Length[1]
+iris$Sepal.Length[1] <- "5.1"
+
+class(iris$Sepal.Length)
+mean(iris$Sepal.Length, na.rm = TRUE)
+
+iris$Sepal.Length <- as.numeric(iris$Sepal.Length)
+
+mean(iris$Sepal.Length, na.rm = TRUE)
+
+
+
 # Bonus look-ahead
 
 library(dplyr)
