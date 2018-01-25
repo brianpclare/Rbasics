@@ -101,6 +101,10 @@ iris$Sepal.Length <- as.numeric(iris$Sepal.Length)
 
 mean(iris$Sepal.Length, na.rm = TRUE)
 
+# Let's do a t-test here
+
+t.test(iris$Petal.Width[iris$Species == "virginica"], iris$Petal.Width[iris$Species == "versicolor"])
+
 
 
 # Bonus look-ahead
