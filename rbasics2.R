@@ -131,6 +131,12 @@ levels(iris$Species) <- append(levels(iris$Species), "some flower")
 
 iris <- rbind(iris, c(5.0, 3.2, 1.1, 0.2, "some flower", "New", 0, 0))
 
+# Intro R - Ch 4 Factors
+# Intro R - Ch 5 Arrays and Matrices
+# Intro R - Ch 6 Lists and Data Frames
+
+
+
 # Bonus look-ahead
 
 library(dplyr)
