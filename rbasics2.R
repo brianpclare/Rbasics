@@ -48,6 +48,8 @@ iris
 
 head(iris)
 iris$Species
+iris[5, ]
+iris[ ,5]
 iris$Sepal.Length
 mean(iris$Sepal.Length)
 
@@ -106,6 +108,28 @@ mean(iris$Sepal.Length, na.rm = TRUE)
 t.test(iris$Petal.Width[iris$Species == "virginica"], iris$Petal.Width[iris$Species == "versicolor"])
 
 
+# Adding a column
+
+newCol <- rep("New", 150)
+iris <- cbind(iris, newCol)
+
+iris$Zero <- 0
+
+iris$Alternating <- c(0,1)
+
+iris$Alternating2 <- c(0,1,2,3)
+
+# Adding a row
+
+iris <- rbind(iris, c(5.0, 3.2, 1.1, 0.2, "Species", "New", 0, 0))
+
+iris <- rbind(iris, c(5.0, 3.2, 1.1, 0.2, "versicolor", "New", 0, 0))
+
+levels(iris$Species)
+
+levels(iris$Species) <- append(levels(iris$Species), "some flower")
+
+iris <- rbind(iris, c(5.0, 3.2, 1.1, 0.2, "some flower", "New", 0, 0))
 
 # Bonus look-ahead
 
