@@ -8,6 +8,9 @@
 
 'This is also a \'string\' with quotes in it'
 
+# For more detail and examples, see https://stat.ethz.ch/R-manual/R-devel/library/base/html/Quotes.html
+
+
 # Statistical procedures
 
 ?t.test
