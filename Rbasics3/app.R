@@ -8,12 +8,14 @@
 #
 
 library(shiny)
+library(dplyr)
+
 
 # Define UI for application that draws a histogram
-ui <- fluidPage(
+ui <- navbarPage("Title", 
    
-   # Application title
-   titlePanel("Old Faithful Geyser Data"),
+   # First tab
+   tabPanel("This is tab #1",
    
    # Sidebar with a slider input for number of bins 
    sidebarLayout(
@@ -29,11 +31,30 @@ ui <- fluidPage(
       mainPanel(
          plotOutput("distPlot")
       )
-   )
+     )
+   ),
+
+  tabPanel("This is tab #2",
+  
+  sidebarLayout(
+    sidebarPanel(
+      selectInput("species", "Sepal Lengths for flowers of species:", levels(iris$Species))
+    ),
+    
+    mainPanel(
+      dataTableOutput("sepal_length")
+    )
+  )
 )
+)
+
 
 # Define server logic required to draw a histogram
 server <- function(input, output) {
+  
+  speciesInput <- reactive({
+    filter(iris, Species == input$species) %>% select(Sepal.Length)
+  })
    
    output$distPlot <- renderPlot({
       # generate bins based on input$bins from ui.R
@@ -43,6 +64,8 @@ server <- function(input, output) {
       # draw the histogram with the specified number of bins
       hist(x, breaks = bins, col = 'darkgray', border = 'white')
    })
+   
+   output$sepal_length <- renderDataTable({speciesInput()})
 }
 
 # Run the application 
