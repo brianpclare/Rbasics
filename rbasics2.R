@@ -17,6 +17,12 @@ in it"
 # For more detail and examples, see https://stat.ethz.ch/R-manual/R-devel/library/base/html/Quotes.html
 
 
+# Floating Point Arithmetic
+
+.3 + .6 == .9
+
+print(.3, digits = 18)
+
 # Statistical procedures
 
 ?t.test
