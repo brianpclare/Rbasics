@@ -149,12 +149,13 @@ iris <- rbind(iris, c(5.0, 3.2, 1.1, 0.2, "some flower", "New", 0, 0))
 
 # Back to Modeling
 
+# iris <- data(iris)
+
 model2 <- lm(Sepal.Length ~ Petal.Length + Species, data = iris)
 summary(model2)
 
 class(iris$Petal.Length)
 iris$Petal.Length <- as.numeric(iris$Petal.Length)
-iris$Sepal.Length <- as.numeric(iris$Sepal.Length)
 
 model2 <- lm(Sepal.Length ~ Petal.Length + Species, data = iris)
 summary(model2)
