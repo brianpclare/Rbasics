@@ -163,6 +163,22 @@ summary(model2)
 model3 <- lm(Sepal.Length ~ Petal.Length * Species, data = iris)
 summary(model3)
 
+# More data cleaning
+set.seed(42)
+
+set <- data.frame(rnorm(100, 10, 5))
+colnames(set) <- c("Num")
+
+# Remove the negatives - I don't want to have to locate all of them and change one by one
+
+set <- data.frame(ifelse(set$Num < 0, 0, set$Num))
+
+
+set2 <- data.frame(rnorm(100, 8, 4))
+colnames(set2) <- c("Num")
+
+set2$Num <- apply(set2[ ,1, drop = FALSE], MARGIN = 2, function(x) {ifelse(x < 0, 0, x)})
+
 
 # Intro R - Ch 4 Factors
 # Intro R - Ch 5 Arrays and Matrices
