@@ -8,3 +8,5 @@
 # 1e6 means 1x10^6 = 1000000
 
 system.time(for (i in 1:1e9) break)
+
+x <- 1:1e12
