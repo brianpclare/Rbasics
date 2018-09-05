@@ -101,3 +101,4 @@ class(`alarm clock`)
 `alarm clock`
 
 `alarm time`
+class(`alarm time`)

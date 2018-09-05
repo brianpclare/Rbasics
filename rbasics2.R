@@ -13,6 +13,8 @@
 newline <- "This is a string with a linebreak
 in it"
 
+newline
+
 
 # For more detail and examples, see https://stat.ethz.ch/R-manual/R-devel/library/base/html/Quotes.html
 
@@ -134,6 +136,9 @@ iris$Alternating <- c(0,1)
 
 iris$Alternating2 <- c(0,1,2,3)
 
+## Error vs Warning
+
+
 # Adding a row
 
 iris <- rbind(iris, c(5.0, 3.2, 1.1, 0.2, "Species", "New", 0, 0))
@@ -149,15 +154,12 @@ iris <- rbind(iris, c(5.0, 3.2, 1.1, 0.2, "some flower", "New", 0, 0))
 
 # Back to Modeling
 
-iris <- data(iris)
-
-
-model2 <- lm(Sepal.Length ~ Petal.Length + Species, data = iris)
-summary(model2)
-
+rm(iris)
+data(iris)
 
 model2 <- lm(Sepal.Length ~ Petal.Length + Species, data = iris)
 summary(model2)
+
 
 model3 <- lm(Sepal.Length ~ Petal.Length * Species, data = iris)
 summary(model3)
